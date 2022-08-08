@@ -75,8 +75,8 @@ class SepetAdapter(var mContext: Context,
                     Snackbar.make(it,"Bu ürünü silmek istediğinize emin misiniz ?",Snackbar.LENGTH_LONG)
                         .setAction("Evet",View.OnClickListener {
                             viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
-                            sepetListesi = emptyList()
                             viewModel.sepetToplam = 0
+                            sepetListesi = emptyList()
                             viewModel.sepetiYukle("MuhammedSahin")
                         })
                         .setBackgroundTint(Color.WHITE)
