@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">YemekSiparis</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Lezzetli yemekler ve tatlılarımızı denemek istemez misiniz? Hadi kendine bir şeyler seç ve alışverişe başla.</string>
+</resources>
