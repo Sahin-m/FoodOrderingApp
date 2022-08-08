@@ -34,6 +34,7 @@ class AnasayfaFragment : Fragment(), SearchView.OnQueryTextListener {
         tasarim = DataBindingUtil.inflate(inflater,R.layout.fragment_anasayfa, container, false)
         tasarim.anasayfaFragment = this
         tasarim.anasayfaToolbarBaslik = "Yemekler"
+
         (activity as AppCompatActivity).setSupportActionBar(tasarim.toolbarAnasayfa)
 
         tasarim.imageViewSirala.setOnClickListener {

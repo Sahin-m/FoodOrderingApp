@@ -1,6 +1,7 @@
 package com.example.yemeksiparis.ui.adapter
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -85,7 +86,6 @@ class SepetAdapter(var mContext: Context,
                 }else{
                     Snackbar.make(it,"Bu ürünü silmek istediğinize emin misiniz ?",Snackbar.LENGTH_LONG)
                         .setAction("Evet",View.OnClickListener {
-
                             //viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
                             //viewModel.sepetToplam = 0
                             //sepetListesi = emptyList()
@@ -94,9 +94,12 @@ class SepetAdapter(var mContext: Context,
                             viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
                             viewModel.sepetToplam = 0
                             sepetListesi = emptyList()
+                            viewModel.sepetiGuncelle(sepet.yemek_adi, sepet.yemek_resim_adi, sepet.yemek_fiyat, sepet.yemek_siparis_adet, "MuhammedSahin")
                             viewModel.sepetiYukle("MuhammedSahin")
                             //viewModel.sepetToplam = 0
                         })
+                        .setBackgroundTint(Color.WHITE)
+                        .setTextColor(Color.RED)
                         .show()
                 }
             }

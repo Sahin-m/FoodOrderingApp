@@ -26,6 +26,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/open_sans"
             app:title="@{sepetToolbarBaslik}" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -33,6 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:adapter="@{sepetAdapter}"
+            android:fontFamily="@font/open_sans"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +61,7 @@
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/orange"
             android:text="Alışverişi Tamamla"
+            android:fontFamily="@font/open_sans"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -73,6 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0 ₺"
+            android:fontFamily="@font/open_sans"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="34sp"
