@@ -55,7 +55,9 @@ class SepetDaoRepository(var sdao: SepetYemeklerDao) {
     fun sepetYemekSil(sepet_yemek_id:Int,kullanici_adi: String){
         sdao.sepettekiYemekSil(sepet_yemek_id,kullanici_adi).enqueue(object : Callback<CRUDcevap>{
             override fun onResponse(call: Call<CRUDcevap>?, response: Response<CRUDcevap>) {
-
+                val basari = response.body().success
+                val mesaj = response.body().message
+                Log.e("Sepete Ekle","$basari - $mesaj")
                 tumSepetiAl(kullanici_adi)
             }
             override fun onFailure(call: Call<CRUDcevap>?, t: Throwable?) {}

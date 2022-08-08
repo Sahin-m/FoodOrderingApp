@@ -54,12 +54,6 @@ class SepetAdapter(var mContext: Context,
             t.imageViewBtnArttir.setOnClickListener {
                 sepet.yemek_siparis_adet += 1
                 t.textViewSepetAdet.text = sepet.yemek_siparis_adet.toString()
-
-                //viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
-                //sepetListesi = emptyList()
-                //notifyDataSetChanged()
-                //viewModel.sepetToplam = 0
-
                 viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
                 viewModel.sepetToplam = 0
                 sepetListesi = emptyList()
@@ -70,33 +64,20 @@ class SepetAdapter(var mContext: Context,
                 if (sepet.yemek_siparis_adet > 1)
                 {
                     sepet.yemek_siparis_adet -= 1
-
-                    //viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
-                    //viewModel.sepetToplam = 0
-                    //sepetListesi = emptyList()
-                    //notifyDataSetChanged()
-
                     viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
                     viewModel.sepetToplam = 0
                     sepetListesi = emptyList()
                     viewModel.sepetiGuncelle(sepet.yemek_adi, sepet.yemek_resim_adi, sepet.yemek_fiyat, sepet.yemek_siparis_adet, "MuhammedSahin")
                     viewModel.sepetiYukle("MuhammedSahin")
-                    //viewModel.sepetToplam = 0
+
 
                 }else{
                     Snackbar.make(it,"Bu ürünü silmek istediğinize emin misiniz ?",Snackbar.LENGTH_LONG)
                         .setAction("Evet",View.OnClickListener {
-                            //viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
-                            //viewModel.sepetToplam = 0
-                            //sepetListesi = emptyList()
-                            //notifyDataSetChanged()
-
                             viewModel.sil(sepet.sepet_yemek_id,"MuhammedSahin")
-                            viewModel.sepetToplam = 0
                             sepetListesi = emptyList()
-                            viewModel.sepetiGuncelle(sepet.yemek_adi, sepet.yemek_resim_adi, sepet.yemek_fiyat, sepet.yemek_siparis_adet, "MuhammedSahin")
+                            viewModel.sepetToplam = 0
                             viewModel.sepetiYukle("MuhammedSahin")
-                            //viewModel.sepetToplam = 0
                         })
                         .setBackgroundTint(Color.WHITE)
                         .setTextColor(Color.RED)
@@ -105,12 +86,8 @@ class SepetAdapter(var mContext: Context,
             }
         }catch (e:Exception){
         }
-
     }
     override fun getItemCount(): Int {
-        if (sepetListesi.isEmpty()){
-            //viewModel.sepetToplam = 0
-        }
         return sepetListesi.size
     }
 
